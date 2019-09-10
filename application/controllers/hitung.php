@@ -10,7 +10,8 @@ class Hitung extends CI_Controller{
 
     function index()
     {
-        $this->load->view('menu_hitung');
+        echo "ini index";
+        //$this->load->view('hitung/index');
     }
 
     function perkalian()

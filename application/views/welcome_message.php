@@ -68,15 +68,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to My 1st Codeigniter page!</h1>
+	<h1>Welcome to My 1st Page using Codeigniter page!</h1>
 
 	<div id="body">
-		<p>Hi all this is my 1st time trying Codeigniter Framework!</p>
+		<ol>
+			<li>Test</li>
+			<li>Test</li>
+			<li>Test</li>
+			<li>Test</li>
+			<li><?php echo $hitung; ?></li>
+		</ol>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
 
-	<p><? echo CI_VERSION; ?></p>
+	<p><? //echo CI_VERSION; ?></p>
 </div>
 
 </body>
