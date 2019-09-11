@@ -1,4 +1,4 @@
-<?php if (! defined('BASEBATH')) exit('No direct script access allowed');
+<?php defined('BASEBATH') OR exit('No direct script access allowed');
 
 class Hitung extends CI_Controller{
 
@@ -10,8 +10,8 @@ class Hitung extends CI_Controller{
 
     function index()
     {
-        echo "ini index";
-        //$this->load->view('hitung/index');
+        // echo "ini index";
+        $this->load->view('hitung/menu_hitung');
     }
 
     function perkalian()
