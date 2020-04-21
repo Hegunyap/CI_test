@@ -1,0 +1,69 @@
+.table {
+    .btn-group .btn {
+        margin-bottom: 0;
+    }
+}
+
+.table-td-middle {
+    > tbody > tr > td {
+        vertical-align: middle;
+    }
+}
+
+.table-variants {
+    margin-bottom: 0;
+
+    > tbody > tr > td {
+        &.td-variant-name {
+            line-height: 34px;
+        }
+
+        .panel {
+            margin-bottom: 0;
+        }
+
+        .switchery-small {
+            margin-top: 6px;
+        }
+    }
+}
+
+.table-attribute-values,
+.table-variants {
+    .btn-link {
+        margin-bottom: 0;
+    }
+}
+
+.table-outlet-inventory {
+    margin-bottom: 0;
+
+    > thead > tr > th {
+        width: 20%;
+
+        &:first-child {
+            width: 40%;
+        }
+    }
+
+    > tbody > tr > td {
+        line-height: 34px;
+    }
+}
+
+.table > tbody > tr > td.td-input-height {
+    line-height: 34px;
+}
+
+.table > tbody > tr > td.td-product-sku {
+    line-height: $line-height-computed * .75;
+
+    small {
+        color: $gray-dark;
+    }
+}
+
+.table > tbody > tr > td span.td-product-name {
+    display: inline-block;
+    @include truncate-text($font-size-base, $line-height-base, 1);
+}

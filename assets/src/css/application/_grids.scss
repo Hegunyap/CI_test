@@ -1,0 +1,13 @@
+.row-same-height {
+    display: flex;
+
+    > [class*='col-'] {
+        display       : flex;
+        flex-direction: column;
+    }
+}
+
+.col-vertical-middle {
+    display        : flex;
+    justify-content: center;
+}

@@ -1,0 +1,51 @@
+.dataTables_filter,
+.dataTables_paginate {
+    text-align: right;
+}
+
+.dataTables_filter {
+    input[type="search"] {
+        margin-left: 10px;
+    }
+}
+
+.dataTables_paginate {
+    .pagination {
+        margin: 0;
+    }
+}
+
+.dataTables_wrapper {
+    padding-bottom: 0;
+
+    .dataTables_info {
+        line-height: 33px;
+    }
+}
+
+.dataTable {
+    .sorting,
+    .sorting_asc,
+    .sorting_desc {
+        cursor: pointer;
+
+        &:after {
+            font-family: 'FontAwesome';
+            float      : right;
+            display    : block;
+        }
+    }
+
+    .sorting:after {
+        color  : darken($gray,5%);
+        content: '\f0dc';
+    }
+
+    .sorting_desc:after {
+        content: '\f0dd';
+    }
+
+    .sorting_asc:after {
+        content: '\f0de';
+    }
+}

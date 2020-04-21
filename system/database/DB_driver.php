@@ -142,7 +142,7 @@ abstract class CI_DB_driver {
 	 *
 	 * @var	int
 	 */
-	public $port			= NULL;
+	public $port			= '';
 
 	/**
 	 * Persistent connection flag
@@ -1308,13 +1308,19 @@ abstract class CI_DB_driver {
 	 */
 	public function list_fields($table)
 	{
+		// Is there a cached result?
+		if (isset($this->data_cache['field_names'][$table]))
+		{
+			return $this->data_cache['field_names'][$table];
+		}
+
 		if (FALSE === ($sql = $this->_list_columns($table)))
 		{
 			return ($this->db_debug) ? $this->display_error('db_unsupported_function') : FALSE;
 		}
 
 		$query = $this->query($sql);
-		$fields = array();
+		$this->data_cache['field_names'][$table] = array();
 
 		foreach ($query->result_array() as $row)
 		{
@@ -1336,10 +1342,10 @@ abstract class CI_DB_driver {
 				}
 			}
 
-			$fields[] = $row[$key];
+			$this->data_cache['field_names'][$table][] = $row[$key];
 		}
 
-		return $fields;
+		return $this->data_cache['field_names'][$table];
 	}
 
 	// --------------------------------------------------------------------

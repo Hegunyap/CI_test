@@ -1,0 +1,4 @@
+.form-control[readonly] {
+    cursor          : pointer;
+    background-color: $input-bg !important;
+}

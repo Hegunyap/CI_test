@@ -128,18 +128,24 @@ class CI_DB_pdo_sqlite_driver extends CI_DB_pdo_driver {
 	 */
 	public function list_fields($table)
 	{
+		// Is there a cached result?
+		if (isset($this->data_cache['field_names'][$table]))
+		{
+			return $this->data_cache['field_names'][$table];
+		}
+
 		if (($result = $this->query('PRAGMA TABLE_INFO('.$this->protect_identifiers($table, TRUE, NULL, FALSE).')')) === FALSE)
 		{
 			return FALSE;
 		}
 
-		$fields = array();
+		$this->data_cache['field_names'][$table] = array();
 		foreach ($result->result_array() as $row)
 		{
-			$fields[] = $row['name'];
+			$this->data_cache['field_names'][$table][] = $row['name'];
 		}
 
-		return $fields;
+		return $this->data_cache['field_names'][$table];
 	}
 
 	// --------------------------------------------------------------------

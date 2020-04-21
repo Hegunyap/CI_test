@@ -1,0 +1,73 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+
+// Variables, Mixins
+@import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import "application/variables";
+@import "vendors/inspinia/mixins";
+@import "application/mixins";
+
+@import "application/grids";
+
+// INSPINIA Theme Elements
+@import "vendors/inspinia/typography";
+@import "application/typography";
+@import "vendors/inspinia/navigation";
+@import "vendors/inspinia/top_navigation";
+@import "application/navs";
+@import "vendors/inspinia/buttons";
+@import "application/buttons";
+@import "vendors/inspinia/badges_labels";
+@import "vendors/inspinia/elements";
+@import "vendors/inspinia/sidebar";
+@import "vendors/inspinia/base";
+@import "application/base";
+@import "vendors/inspinia/pages";
+@import "vendors/inspinia/chat";
+@import "vendors/inspinia/metismenu";
+@import "vendors/inspinia/spinners";
+@import "application/tables";
+
+// Landing page styles
+@import "vendors/inspinia/landing";
+
+// RTL Support
+@import "vendors/inspinia/rtl";
+
+// For demo only - config box style
+// @import "theme-config";
+
+// INSPINIA Skins
+@import "vendors/inspinia/skins";
+@import "application/skin";
+
+// Media query style
+@import "vendors/inspinia/media";
+
+// Custom style
+// Your custom style to override base style
+// @import "vendors/inspinia/custom";
+@import "application/products";
+@import "application/utilities";
+
+// vendors
+@import "../../../node_modules/select2/src/scss/core";
+@import "vendors/select2";
+@import "../../../.tmp/switchery";
+@import "vendors/dropzone";
+@import "vendors/datatables";
+
+// Clear layout on print mode
+@media print {
+    nav.navbar-static-side {
+        display: none;
+    }
+
+    body {
+        overflow: visible !important;
+    }
+
+    #page-wrapper {
+        margin: 0;
+    }
+}

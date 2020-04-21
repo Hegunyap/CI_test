@@ -1,0 +1,23 @@
+.lead {
+    font-size: $font-size-large;
+}
+
+ul.list-meta,
+ul.list-tags {
+    list-style   : none;
+    margin-bottom: 0;
+    padding-left : 0;
+
+    li {
+        display     : inline-block;
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+ul.list-tags {
+    margin-bottom: 0;
+}
