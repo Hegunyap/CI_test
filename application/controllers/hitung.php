@@ -1,4 +1,5 @@
-<?php defined('BASEBATH') OR exit('No direct script access allowed');
+<?php 
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Hitung extends CI_Controller{
 
@@ -8,21 +9,26 @@ class Hitung extends CI_Controller{
         $this->load->helper(array('url', 'form'));
     }
 
-    function index()
+    public function index()
     {
         // echo "ini index";
         $this->load->view('hitung/menu_hitung');
     }
 
-    function perkalian()
+    public function perkalian()
     {
-        $data['v1'] = (int)$this->input->post('v1', true);
-        $data['v2'] = (int)$this->input->post('v2', true);
-        $data['hasil']=$data('v1')*$data['v2'];
-        $this->load-view('perkalian', $data);
+        if ($this->input->post()){
+            $data['v1'] = (int)$this->input->post('v1', true);
+            $data['v2'] = (int)$this->input->post('v2', true);
+            $data['hasil']=$data('v1')*$data['v2'];
+
+            $this->load-view('perkalian', $data);
+        }else{
+            $this->load-view('hitung/perkalian');
+        }
     }
 
-    function pembagian()
+    public function pembagian()
     {
         $data['v1']=(int)$this->input->post('v1'. true);
         $data['v2']=(int)$this->input-post('v2', true);
