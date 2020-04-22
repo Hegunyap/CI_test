@@ -3,13 +3,13 @@
  * A base controller for CodeIgniter with view autoloading, layout support,
  * model loading, helper loading, asides/partials and per-controller 404
  *
- * Modified by KhairulA <khairul@webimp.com.sg>
+ * Modified by 
  *
  * @link      http://github.com/jamierumbelow/codeigniter-base-controller
  * @copyright Copyright (c) 2012, Jamie Rumbelow <http://jamierumbelow.net>
  */
 
-class WebimpController extends CI_Controller
+class MY_Controller extends CI_Controller
 {
 
     /* --------------------------------------------------------------
@@ -366,36 +366,36 @@ class WebimpController extends CI_Controller
         $version = get_app_version();
 
         // main app
-        register_script('sanz', assets_url("js/sanz.min.js"), ['jquery', 'toastr', 'sweetalert'], $version, false);
-        register_style('sanz', assets_url("css/sanz.min.css"), ['vendor', 'daterangepicker'], $version);
+        // register_script('sanz', assets_url("js/sanz.min.js"), ['jquery', 'toastr', 'sweetalert'], $version, false);
+        // register_style('sanz', assets_url("css/sanz.min.css"), ['vendor', 'daterangepicker'], $version);
 
         // vendors
         register_style('vendor', assets_url("css/vendor.min.css"), [], $version);
 
         // datatables
-        register_script('datatables', assets_url("js/datatables.min.js"), ['jquery', 'sanz'], '1.10.16', false);
-        register_script('datatables-hr', assets_url("js/datatables/hr.min.js"), ['datatables'], $version, false);
-        register_script('datatables-finance', assets_url("js/datatables/finance.min.js"), ['datatables'], $version, false);
-        register_script('datatables-accounting', assets_url("js/datatables/accounting.min.js"), ['datatables'], $version, false);
-        register_script('datatables-customer', assets_url("js/datatables/customer.min.js"), ['datatables'], $version, false);
-        register_script('datatables-product', assets_url("js/datatables/product.min.js"), ['datatables'], $version, false);
-        register_script('datatables-quotation', assets_url("js/datatables/quotation.min.js"), ['datatables'], $version, false);
-        register_script('datatables-sales', assets_url("js/datatables/sales.min.js"), ['datatables'], $version, false);
-        register_script('datatables-supplier', assets_url("js/datatables/supplier.min.js"), ['datatables'], $version, false);
-        register_script('datatables-setting', assets_url("js/datatables/setting.min.js"), ['datatables'], $version, false);
+        // register_script('datatables', assets_url("js/datatables.min.js"), ['jquery', 'sanz'], '1.10.16', false);
+        // register_script('datatables-hr', assets_url("js/datatables/hr.min.js"), ['datatables'], $version, false);
+        // register_script('datatables-finance', assets_url("js/datatables/finance.min.js"), ['datatables'], $version, false);
+        // register_script('datatables-accounting', assets_url("js/datatables/accounting.min.js"), ['datatables'], $version, false);
+        // register_script('datatables-customer', assets_url("js/datatables/customer.min.js"), ['datatables'], $version, false);
+        // register_script('datatables-product', assets_url("js/datatables/product.min.js"), ['datatables'], $version, false);
+        // register_script('datatables-quotation', assets_url("js/datatables/quotation.min.js"), ['datatables'], $version, false);
+        // register_script('datatables-sales', assets_url("js/datatables/sales.min.js"), ['datatables'], $version, false);
+        // register_script('datatables-supplier', assets_url("js/datatables/supplier.min.js"), ['datatables'], $version, false);
+        // register_script('datatables-setting', assets_url("js/datatables/setting.min.js"), ['datatables'], $version, false);
         
         // modules
         register_script('modules', assets_url("js/modules/base.min.js"), ['jquery', 'sanz'], $version, false);
-        register_script('modules-leave', assets_url("js/modules/leave.min.js"), ['modules'], $version, false);
-        register_script('modules-staff', assets_url("js/modules/staff.min.js"), ['modules'], $version, false);
-        register_script('modules-payroll', assets_url("js/modules/payroll.min.js"), ['modules'], $version, false);
-        register_script('modules-timesheet', assets_url("js/modules/timesheet.min.js"), ['modules', 'XLSX'], $version, false);
-        register_script('modules-fixed-asset', assets_url("js/modules/fixed_asset.min.js"), ['modules'], $version, false);
-        register_script('modules-profit-and-loss', assets_url("js/modules/profit_and_loss.min.js"), ['modules'], $version, false);
+        // register_script('modules-leave', assets_url("js/modules/leave.min.js"), ['modules'], $version, false);
+        // register_script('modules-staff', assets_url("js/modules/staff.min.js"), ['modules'], $version, false);
+        // register_script('modules-payroll', assets_url("js/modules/payroll.min.js"), ['modules'], $version, false);
+        // register_script('modules-timesheet', assets_url("js/modules/timesheet.min.js"), ['modules', 'XLSX'], $version, false);
+        // register_script('modules-fixed-asset', assets_url("js/modules/fixed_asset.min.js"), ['modules'], $version, false);
+        // register_script('modules-profit-and-loss', assets_url("js/modules/profit_and_loss.min.js"), ['modules'], $version, false);
 
-        register_script('modules-account', assets_url("src/js/modules/account.js"), ['modules'], $version, false);
-        register_script('modules-product', assets_url("js/modules/product.min.js"), ['modules', 'XLSX'], $version, false);
-        register_script('modules-supplier', assets_url("js/modules/supplier.min.js"), ['modules'], $version, false);
+        // register_script('modules-account', assets_url("src/js/modules/account.js"), ['modules'], $version, false);
+        // register_script('modules-product', assets_url("js/modules/product.min.js"), ['modules', 'XLSX'], $version, false);
+        // register_script('modules-supplier', assets_url("js/modules/supplier.min.js"), ['modules'], $version, false);
 
         // jquery
         register_script('jquery', assets_url("js/jquery.min.js"), [], '3.3.1', false);

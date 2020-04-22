@@ -3,13 +3,13 @@
  * A base model with a series of CRUD functions (powered by CI's query builder),
  * validation-in-model support, event callbacks and more.
  *
- * Modified: KhairulA
+ * Modified: 
  *
  * @link      http://github.com/jamierumbelow/codeigniter-base-model
  * @copyright Copyright (c) 2012, Jamie Rumbelow <http://jamierumbelow.net>
  */
 
-class WebimpModel extends CI_Model
+class MY_Model extends CI_Model
 {
 
     /* --------------------------------------------------------------

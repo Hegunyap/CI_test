@@ -39,11 +39,11 @@
     <p>Silahkan masukan data berikut!1!</p>
     <?php echo form_open('hitung/perkalian');?>
     <?php echo form_input('v1', $v1);?> x 
-    <?php echo form_open('v2', $v2);?> <br/>
+    <?php echo form_input('v2', $v2);?> <br/>
 
     <?php echo form_submit('submit', 'Hitung!!');?>
     <?php echo form_close();?><br>
-    Hasil : <?php echo $hasil; ?>
+    <?php echo "Hasil : " . $hasil; ?>
 
     <p><br/>Page rendered in {elapsed_time} seconds</p>
 </body>

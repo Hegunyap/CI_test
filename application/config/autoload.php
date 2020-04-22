@@ -58,7 +58,13 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array();
+$autoload['libraries'] = [
+    'database',
+    'WebimpAssetDependency',
+    'WebimpAssetDependencies',
+    'WebimpScripts',
+    'WebimpStyles',
+];
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +95,16 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array();
+$autoload['helper'] = array(
+    'url',
+    'file',
+    'date',
+    'utility',
+    'form',
+    'google_storage',
+    'scripts',
+    'styles',
+);
 
 /*
 | -------------------------------------------------------------------

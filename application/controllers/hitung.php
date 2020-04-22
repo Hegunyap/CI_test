@@ -1,4 +1,4 @@
-<?php 
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Hitung extends CI_Controller{
@@ -17,15 +17,11 @@ class Hitung extends CI_Controller{
 
     public function perkalian()
     {
-        if ($this->input->post()){
-            $data['v1'] = (int)$this->input->post('v1', true);
-            $data['v2'] = (int)$this->input->post('v2', true);
-            $data['hasil']=$data('v1')*$data['v2'];
+        $data['v1'] = (int)$this->input->post('v1', true);
+        $data['v2'] = (int)$this->input->post('v2', true);
+        $data['hasil']=$data['v1']*$data['v2'];
 
-            $this->load-view('perkalian', $data);
-        }else{
-            $this->load-view('hitung/perkalian');
-        }
+        $this->load->view('hitung/perkalian', $data);
     }
 
     public function pembagian()

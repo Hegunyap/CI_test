@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User_model extends WebimpModel
+class User_model extends MY_Model
 {
     protected $_table = 'user';
     protected $soft_delete = true;
